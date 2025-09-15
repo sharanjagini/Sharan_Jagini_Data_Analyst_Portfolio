@@ -1,0 +1,299 @@
+/* General Styling */
+:root {
+    --primary-color: #2c3e50; /* Dark Blue */
+    --secondary-color: #3498db; /* Bright Blue */
+    --background-color: #ecf0f1; /* Light Gray */
+    --text-color: #34495e; /* Dark Gray */
+    --card-bg-color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    color: var(--card-bg-color);
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content .subtitle {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content .intro {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: var(--card-bg-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9; /* Darker blue */
+}
+
+/* General Content Section Styling */
+.content-section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+}
+
+/* Project Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.project-card ul {
+    padding-left: 20px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-category {
+    background: var(--card-bg-color);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 250px;
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Education Section */
+.education-item {
+    background: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.education-item p {
+    margin: 5px 0;
+}
+
+/* Certifications */
+.cert-list {
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.cert-list li {
+    background: var(--card-bg-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    break-inside: avoid;
+}
+
+/* Footer / Contact */
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+footer h2 {
+    color: var(--card-bg-color);
+    font-size: 2.5em;
+}
+
+.contact-links {
+    margin: 30px 0;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--card-bg-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #2980b9;
+}
+
+.contact-button i {
+    margin-right: 8px;
+}
+
+.copyright {
+    font-size: 0.9em;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Simple hiding for mobile, can be replaced with a hamburger menu */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2em;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cert-list {
+        column-count: 1;
+    }
+}
